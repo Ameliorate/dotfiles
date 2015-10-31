@@ -1,26 +1,22 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'The-NERD-tree'
 Plugin 'Syntastic'
 Plugin 'fugitive.vim'
 Plugin 'delimitMate.vim'
-" Plugin 'eagletmt/neco-ghc'
+Plugin 'eagletmt/neco-ghc'
 Plugin 'vim-scripts/Solarized'
+Plugin 'eagletmt/ghcmod-vim'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " require
-d
+
 set backspace=indent,eol,start  " more powerful backspacing
 " Now we set some defaults for the editor
 set history=50                  " keep 50 lines of command line history
@@ -56,3 +52,11 @@ if has('gui_running')
     set background=dark
     colorscheme solarized
 endif
+
+" Haskell Keybindings
+" Reload
+map <silent> tu :call GHC_BrowseAll()<CR>
+" Type Lookup
+map <silent> tw :call GHC_ShowType(1)<CR>
+
+set paste
