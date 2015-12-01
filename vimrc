@@ -12,6 +12,9 @@ Plugin 'delimitMate.vim'
 Plugin 'eagletmt/neco-ghc'
 Plugin 'vim-scripts/Solarized'
 Plugin 'eagletmt/ghcmod-vim'
+Plugin 'idanarye/vim-dutyl'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,3 +63,5 @@ map <silent> tu :call GHC_BrowseAll()<CR>
 map <silent> tw :call GHC_ShowType(1)<CR>
 
 set paste
+
+autocmd VimEnter *.d DUDCDstartServer
