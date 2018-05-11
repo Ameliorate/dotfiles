@@ -1,0 +1,2 @@
+OPTIONS=hilite_pet,hilite_pile,!implicit_uncursed,lit_corridor,msg_window:reversed,number_pad:1,color
+AUTOPICKUP_EXCEPTION=">chest"
